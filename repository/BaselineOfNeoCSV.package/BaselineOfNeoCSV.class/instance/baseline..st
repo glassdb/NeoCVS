@@ -23,7 +23,10 @@ baseline: spec
         yourself.
       spec
         package: 'Neo-CSV-Tests'
-          with: [ spec includes: #('Neo-CSV-GemStone-Tests') ];
+          with: [ 
+              spec
+                requires: #('PharoCompatibility');
+                includes: #('Neo-CSV-GemStone-Tests') ];
         package: 'Neo-CSV-GemStone-Tests'
           with: [ spec requires: #('Neo-CSV-Tests') ];
         yourself ]
